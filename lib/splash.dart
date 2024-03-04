@@ -1,8 +1,10 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/advice.dart';
 import 'package:flutter_projects/login.dart';
 import 'package:flutter_projects/main.dart';
 import 'package:flutter_projects/home.dart';
+import 'package:flutter_projects/reflect.dart';
 import 'package:flutter_projects/signup.dart';
 
 class Splash extends StatelessWidget {
@@ -13,7 +15,7 @@ class Splash extends StatelessWidget {
     var scale;
     return AnimatedSplashScreen(
       splash: 'assets/splash.png',
-      nextScreen: Signup(),
+      nextScreen: Reflect(),
       splashTransition: SplashTransition.rotationTransition,
       duration: 500,
       backgroundColor: Colors.black,
