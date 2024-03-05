@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/login.dart';
 import 'package:flutter_projects/splash.dart';
 
 void main() {
@@ -57,8 +58,17 @@ class Onboarding extends StatelessWidget {
                 ),
               ),
             ),
+
             Container(
-              child: Image.asset('assets/btn.png'),
+              child: TextButton(
+            child: Image.asset('assets/btn.png'),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Login()),
+                  );
+                },
+              ),
             ),
           ],
         ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/advice.dart';
+import 'package:flutter_projects/reflect.dart';
 
 
 void main() {
@@ -45,69 +47,82 @@ class Home extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    width: 172,
-                    height: 150,
-                    padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        width: .5,
-                        color: Color(0xFF989898),
+                  TextButton(onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Advice()),
+                    );
+                  },
+                      child: Container(
+                        width: 162,
+                        height: 150,
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                            width: .5,
+                            color: Color(0xFF989898),
+                          ),
+                          color: Color(0xFF383838),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+
+                          children: [
+                            Image.asset('assets/msg.png'),
+                            Text('Talk to a Friend',
+
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16.0,
+
+                              ) ,
+                            )
+                          ],
+
+                        ),
+                      ),),
+                  TextButton(onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Reflect()),
+                    );
+                  },
+                      child: Container(
+                        width: 162,
+                        height: 150,
+                        padding: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                            width: .5,
+                            color: Color(0xFF989898),
+                          ),
+                          color: Color(0xFF383838),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+
+                          children: [
+                            Image.asset('assets/msg.png'),
+                            Text('Make A Reflection',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16.0,
+
+                              ) ,
+                            )
+                          ],
+
+                        ),
                       ),
-                      color: Color(0xFF383838),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-
-                      children: [
-                        Image.asset('assets/msg.png'),
-                        Text('Talk to a Friend', 
-                          
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16.0,
-                          
-                        ) ,
-                        )
-                      ],
-
-                    ),
-                  ),
-                  Container(
-                    width: 172,
-                    height: 150,
-                    padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        width: .5,
-                        color: Color(0xFF989898),
-                      ),
-                      color: Color(0xFF383838),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-
-                      children: [
-                        Image.asset('assets/msg.png'),
-                        Text('Make A Reflection',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16.0,
-
-                          ) ,
-                        )
-                      ],
-
-                    ),
-                  ),
+                  )
                 ],
               ),
             ),

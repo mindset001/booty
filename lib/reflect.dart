@@ -33,7 +33,9 @@ class Reflect extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  TextButton(onPressed: null,
+                  TextButton(onPressed: () {
+                      Navigator.pop(context);
+                      },
                       child: Image.asset('assets/back.png')),
 
                   Column(
@@ -146,20 +148,24 @@ class Reflect extends StatelessWidget {
                 ],
               ),
             ),
-            // Container(
-            //   child: Row(
-            //     children: [
-            //       TextFormField(
-            //         decoration:  InputDecoration(
-            //           hintText: 'Enter your email Address',
-            //           labelText: 'Email Address',
-            //           border: OutlineInputBorder(),
-            //         ),
-            //       ),
-            //       Image.asset('assets/send.png')
-            //     ],
-            //   ),
-            // )
+            Container(
+              width: 400,
+              padding: EdgeInsets.all(10),
+              child: Row(
+                children: [
+                  Expanded(child: TextFormField(
+                    decoration:  InputDecoration(
+                      // hintText: 'Enter your email Address',
+                      // labelText: 'Email Address',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+
+                  ),
+                  TextButton(onPressed: null, child: Image.asset('assets/send.png'))
+                ],
+              ),
+            )
 
           ],
         ),

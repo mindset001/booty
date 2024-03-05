@@ -15,7 +15,7 @@ class Splash extends StatelessWidget {
     var scale;
     return AnimatedSplashScreen(
       splash: 'assets/splash.png',
-      nextScreen: Reflect(),
+      nextScreen: Onboarding(),
       splashTransition: SplashTransition.rotationTransition,
       duration: 500,
       backgroundColor: Colors.black,

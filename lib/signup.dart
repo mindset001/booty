@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/login.dart';
 
 void main() => runApp(Signup());
 
@@ -108,7 +109,12 @@ class MyCustomFormState extends State<Signup> {
                       padding: EdgeInsets.only(top: 40.0),
                       child: TextButton(
                         child: Image.asset('assets/ctr.png'),
-                        onPressed: null,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Login()),
+                          );
+                        },
                       )
                   ),
                   Container(
@@ -140,7 +146,12 @@ class MyCustomFormState extends State<Signup> {
                               color: Colors.white
                           ),
                           ),
-                          onPressed: null,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Login()),
+                            );
+                          },
                         )
                       ],
                     ),
